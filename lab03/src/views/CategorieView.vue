@@ -1,21 +1,20 @@
 <template>
+  <h1>Events For Good</h1>
   <div class="events">
-    <EventCard v-for="event in events" :key="event.id" :event="event" />
-  </div>
-  <div class="categorie">
+    <!-- <img alt="Vue logo" src="../assets/logo.png" />
+    <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <Categories v-for="event in events" :key="event.id" :event="event" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import EventCard from '@/components/EventCard.vue'
 import Categories from '@/components/Categories.vue'
-
 export default {
-  name: 'HomeView',
+  name: 'EventListView',
   components: {
-    EventCard,
+    //   HelloWorld
+    // }
     Categories
   },
   data() {
@@ -59,17 +58,10 @@ export default {
   }
 }
 </script>
-
 <style scoped>
 .events {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.categorie {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 </style>
